@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head> <% include partials/template/head.ejs %></head>
+
+<body>
+	<% include partials/template/header.ejs %>
+
+	<section class = "layout">
+		<div class = "primary">
+			<div> 
+				<!-- <% if (!user) { %>}  -->
+				<div style="width:500px; height: 180px;">
+					<h3 style="font-size:40px;"> Welcome to Movie Lounge!</h3>
+					<a href="/auth/facebook">
+						<img src = "fb-login.jpg" width="151" height="24"></a>
+				</div>
+				
+				<!-- <% } else { %>
+					<h3> Hello, <%=user.username %>! </h3>
+				} -->
+			</div>
+
+			<p>ID: <%= user.id %></p>
+			<p>Username: <%= user.username %></p>
+			<p>Name :<%= user.displayName %></p>
+		</div>  <!--primary -->
+		
+    	<div class = "secondary">
+    		<% include partials/content/genre.ejs %>
+    		<% include partials/content/inTheater.ejs %>
+    	</div> <!--secondary-->	
+    	
+    
+    </section>  <!--layout section -->
+
+	<% include partials/template/footer.ejs %>
+	<% include partials/template/jsdefault.ejs %>
+
+</body>
+</html>

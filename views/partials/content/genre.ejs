@@ -1,0 +1,16 @@
+<article class = "nextmeeting">
+  <h1> Genres </h1>
+  <div class = "pixgrid" >
+
+  	<!-- display genres in database -->
+  	<% if (genres.length > 0) { %>
+    <%	for (i=0; i<genres.length; i++) { %>
+            <ul>
+              <a href="/genres/<%= genres[i] %>"> <%=genres[i]%> </a>
+            </ul>
+  	<% 	} %>
+
+  	<% } %>	
+  </div>
+
+</article>

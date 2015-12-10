@@ -1,0 +1,13 @@
+<article class = "inTheater">
+	
+	<h1> In Theater: </h1>
+	<ul class="group">
+		<% inTheater.forEach( function(item){ %>
+			<li>
+				<%= item.title %>
+				<!-- <img src = "<%= item.poster %>" width = 40% height = 40%> -->
+			</li>		
+		<% }) %>
+
+	</ul>
+</article>

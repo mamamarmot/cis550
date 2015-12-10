@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head> <% include partials/template/head.ejs %></head>
+
+<body>
+	<% include partials/template/header.ejs %>
+
+	<section class = "layout">
+		<div class = "primary">
+			<div>
+				<% include partials/content/listofmovies.ejs %>
+			</div>
+		</div>  <!--primary -->
+
+
+    	<div class = "secondary">
+    		<% include partials/content/genre.ejs %>
+    		<% include partials/content/inTheater.ejs %>
+    	</div> <!--secondary-->	
+    
+    </section>  <!--layout section -->
+
+	<% include partials/template/footer.ejs %>
+	<% include partials/template/jsdefault.ejs %>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head> <% include partials/template/head.ejs %></head>
+
+<body>
+	<% include partials/template/header.ejs %>
+
+	<section class = "layout">
+		<div class = "primary">
+			
+			  <div>
+			  	<h2> Profile Page </h2>
+			  	<a href = "/logout"> Log out </a> 
+			  </div>
+
+			  <div>
+			    <h3> Local </h3>
+			    <p>
+			    	Welcome!
+			    	<strong>id</strong> : <%=user.local.username %><br>
+			    	<a href = "/signout" title="sign out">Sign out</a>
+			    </p>
+			  </div>
+
+			  <!-- Facebook Information -->
+			  <div>
+			    <h3> Facebook  </h3>
+			    <p>
+			    	<strong>id</strong> : <%=user.facebook.id%><br>
+			    	<strong>token</strong> : <%=user.facebook.token%><br>
+			    	<strong>email</strong> : <%=user.facebook.email %><br>
+			    	<strong>name</strong> : <%= user.facebook.name %></br>
+			    </p>
+			  </div> -->
+
+		</div>  <!--primary -->	
+    </section>  <!--layout section -->
+
+	<% include partials/template/footer.ejs %>
+	<% include partials/template/jsdefault.ejs %>
+
+</body>
+</html>

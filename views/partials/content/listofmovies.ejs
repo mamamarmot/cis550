@@ -1,0 +1,19 @@
+<article class = "movie_list">
+	<section class = "layout">
+		<div class = "primary">
+		<!-- loop through selected movies in database -->
+		<% mysql.forEach(function(item) { %>
+			<div>
+				<h4> <%=item.title %> </h4> 
+				<form method="get" action="/getReview">
+					<button type = "submit" name = "movieid" value = "<%=item.id%>"> Details </button>
+				</form>
+				<img src = "<%=item.poster%>" alt="poster" height="120" width="150"/> 
+				<br>
+			</div>
+
+		<%	}) %>
+		</div>
+	</section>
+</article>
+

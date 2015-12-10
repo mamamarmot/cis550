@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head> <% include partials/template/head.ejs %></head>
+
+<body>
+	<% include partials/template/header.ejs %>
+
+	<section class = "layout">
+		<div class = "primary">
+			<div>
+				<% var i = 0; %>
+				<% mysql.forEach(function(item) { %>
+					<div>
+						<br>
+						<% if (i==0) { %>					
+							<h3> <%=item.title %> </h3>
+							<br>
+							<ul><img src = "<%=item.poster%>" alt="poster" height="250" width="300"/> </ul>
+							<ul> <b>Rating:</b> <%=item.rating %> </ul>
+							<ul> <b>Genres:</b> <%=item.genres %> </ul>
+							<ul> <b>Overview:</b> <%=item.overview %> </ul>
+
+						<% } %>
+						<ul> <b>Reviews</b> </ul>
+						<p> <%= item.review %> </p>
+						<% i++ %>
+						<button type="submit" class="button-0"> Write a review </button>
+						<br>
+					</div>
+				<%	}) %>
+			</div>
+		</div>  <!--primary -->
+
+
+    	<div class = "secondary">
+    		<% include partials/content/genre.ejs %>
+    		<% include partials/content/inTheater.ejs %>
+    	</div> <!--secondary-->	
+    
+    </section>  <!--layout section -->
+
+	<% include partials/template/footer.ejs %>
+	<% include partials/template/jsdefault.ejs %>
+
+</body>
+</html>
